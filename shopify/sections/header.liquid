@@ -1,0 +1,70 @@
+{% schema %}
+  {
+    "name": "Header",
+    "class": "header-bar",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Nav bar"
+      },
+      {
+        "type": "link_list",
+        "id": "navLinks",
+        "label": "Nav links"
+      },
+      {
+        "type": "text",
+        "id": "copyright",
+        "label": "Copyright"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show Search Link",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_accounts",
+        "label": "Show Account Link",
+        "default": true,
+        "info": "Must have customer accounts enabled."
+      },
+      {
+        "type": "header",
+        "content": "Promo Bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "headerPromoActive",
+        "label": "Show header promo"
+      },
+      {
+        "type": "text",
+        "id": "promoText",
+        "label": "Promo Text"
+      },
+      {
+        "type": "color",
+        "id": "backgroundColor",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "textColor",
+        "label": "Text color",
+        "default": "#6ECEB2"
+      }
+    ]
+  }
+{% endschema %}
+
+{% include 'header',
+    navLinks: section.settings.navLinks,
+    copyright: section.settings.copyright,
+    headerPromoActive: section.settings.headerPromoActive,
+    promoText: section.settings.promoText,
+    backgroundColor: section.settings.backgroundColor,
+    textColor: section.settings.textColor,
+%}
