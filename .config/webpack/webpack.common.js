@@ -4,15 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   stats: 'minimal',
-  entry: path.resolve(__dirname, '../../src/global.js'),
+  entry: path.resolve(__dirname, '../../src/main.js'),
   output: {
     path: path.resolve(__dirname, '../../shopify/assets/'),
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['*', '.js', '.vue', '.json'],
+    extensions: ['*', '.js', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm-bundler.js',
       '@': path.resolve(__dirname, '../../src/'),
       '@shopify-directory': path.resolve(__dirname, '../../shopify/')
     }

@@ -3,3 +3,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import "./base/_reset.scss";
+@import "./base/_variables.scss";
